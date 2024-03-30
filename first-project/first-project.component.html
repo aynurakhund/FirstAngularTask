@@ -1,0 +1,88 @@
+<div class="body" *ngIf="flag == false">
+  <form action="">
+    <input
+      type="text"
+      class="name"
+      name="info"
+      [(ngModel)]="name"
+      placeholder="Username"
+    />
+    <input
+      type="text"
+      class="password"
+      name="info"
+      [(ngModel)]="password"
+      placeholder="Password"
+    />
+    <button (click)="signIn()">Sign in</button>
+  </form>
+</div>
+
+<div class="secondPart" *ngIf="flag == true">
+  <div class="foodPart">
+    <div class="foodName">
+      <input
+        type="text"
+        class="foods"
+        name="foodName"
+        [(ngModel)]="foodd"
+        placeholder="foodName"
+      />
+      <div class="list">
+        <ul class="list">
+          <li *ngFor="let item of foodNames">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+    <button (click)="add()">Add</button>
+  </div>
+
+  <div class="drinks">
+    <div class="drinkName">
+      <input
+        type="radio"
+        name="drinks"
+        [(ngModel)]="drinkName"
+        value="Cola"
+        class="col"
+      />
+      <label for="col">Cola</label>
+      <input
+        type="radio"
+        name="drinks"
+        [(ngModel)]="drinkName"
+        value="Fanta"
+        class="fanta"
+      />
+      <label for="fanta">fanta</label>
+      <input
+        type="radio"
+        name="drinks"
+        [(ngModel)]="drinkName"
+        value="Sprite"
+        class="sprite"
+      />
+      <label for="sprite">sprite</label>
+    </div>
+    <div class="drinkImg" [ngSwitch]="drinkName">
+      <span *ngSwitchCase="'Cola'">
+        <img
+          src="https://static.insales-cdn.com/images/products/1/7728/447569456/3720497_1.jpg"
+        />
+      </span>
+      <span *ngSwitchCase="'Fanta'">
+        <img
+          src="https://positano.lv/wp-content/uploads/2021/11/fanta-0.5-new.png"
+          alt=""
+        />
+      </span>
+      <span *ngSwitchCase="'Sprite'">
+        <img
+          src="https://positano.lv/wp-content/uploads/2021/11/sprite-0.5-newest.png"
+          alt=""
+        />
+      </span>
+    </div>
+    <span>{{ drinkName }}</span>
+  </div>
+</div>

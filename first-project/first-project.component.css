@@ -1,0 +1,41 @@
+.body {
+  border: 2px solid green;
+  border-radius: 10px;
+  width: 500px;
+  padding: 20px;
+}
+.body form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.body form button {
+  margin-left: 170px;
+}
+.secondPart {
+  border: 2px solid green;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.drinkName {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+}
+button {
+  width: 100px;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
+img {
+  width: 70px;
+  height: 70px;
+}
